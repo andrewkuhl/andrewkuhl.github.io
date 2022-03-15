@@ -8,14 +8,32 @@
 
 /* Begin PBXFileReference section */
 		0DC63D5427DFFDC500E8933B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		0DF63F2527E1382F008A65F3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		0DF63F2627E1383D008A65F3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		0DF63F2827E13B6B008A65F3 /* man.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = man.gif; sourceTree = "<group>"; };
+		0DF63F2927E13B6B008A65F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0DF63F2A27E13B6B008A65F3 /* views.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = views.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		0D62654827DFF7C700362F69 = {
 			isa = PBXGroup;
 			children = (
+				0DF63F2727E13B6B008A65F3 /* assets */,
+				0DF63F2627E1383D008A65F3 /* script.js */,
+				0DF63F2527E1382F008A65F3 /* style.css */,
 				0DC63D5427DFFDC500E8933B /* index.html */,
 			);
+			sourceTree = "<group>";
+		};
+		0DF63F2727E13B6B008A65F3 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				0DF63F2827E13B6B008A65F3 /* man.gif */,
+				0DF63F2927E13B6B008A65F3 /* README.md */,
+				0DF63F2A27E13B6B008A65F3 /* views.gif */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
