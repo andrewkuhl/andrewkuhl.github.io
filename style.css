@@ -70,15 +70,18 @@
     display: flex;
     justify-content: center;
 }
-.filter-button {
+.gal-button {
     width: 100px;
     font-size: 18px;
     border: 1px solid rgba(0,0,0,.4);;
     text-align: center;
     background-color: #FAF9F6;
 }
-.filter-button:active {
+.gal-button.active {
     background-color: #F6F7FA;
+    transform:scale(1.08);
+    transition: all 0.1s ease;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .gal-container{
     display: grid;
@@ -118,4 +121,18 @@
         margin: -1.3em 0em 3em;
     }
 
+}
+.gal-obj.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gal-obj.hide{
+	display: none;
 }
