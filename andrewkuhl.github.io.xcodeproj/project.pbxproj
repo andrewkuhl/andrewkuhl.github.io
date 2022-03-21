@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		0D56289327E812C1001C842D /* portfolio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = portfolio.html; sourceTree = "<group>"; };
+		0D7C8B2627E5B742005DA0C8 /* paper6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper6.pdf; sourceTree = "<group>"; };
+		0D7C8B2727E5B742005DA0C8 /* paper7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper7.pdf; sourceTree = "<group>"; };
+		0D7C8B2827E5B742005DA0C8 /* paper5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper5.pdf; sourceTree = "<group>"; };
+		0D7C8B2927E5B742005DA0C8 /* paper1_Page_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper1_Page_2.png; sourceTree = "<group>"; };
+		0D7C8B2A27E5B742005DA0C8 /* paper1_Page_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper1_Page_3.png; sourceTree = "<group>"; };
+		0D7C8B2B27E5B742005DA0C8 /* paper4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper4.pdf; sourceTree = "<group>"; };
+		0D7C8B2C27E5B742005DA0C8 /* paper1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper1.pdf; sourceTree = "<group>"; };
+		0D7C8B2D27E5B742005DA0C8 /* paper3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper3.pdf; sourceTree = "<group>"; };
+		0D7C8B2E27E5B742005DA0C8 /* paper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper1.png; sourceTree = "<group>"; };
+		0D7C8B2F27E5B742005DA0C8 /* paper2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper2.pdf; sourceTree = "<group>"; };
+		0D7C8B3027E5B742005DA0C8 /* paper1page1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper1page1.pdf; sourceTree = "<group>"; };
+		0D7C8B3127E5B742005DA0C8 /* paper9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper9.pdf; sourceTree = "<group>"; };
+		0D7C8B3227E5B742005DA0C8 /* paper8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper8.pdf; sourceTree = "<group>"; };
 		0DC63D5427DFFDC500E8933B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0DF63F2527E1382F008A65F3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		0DF63F2627E1383D008A65F3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
@@ -19,11 +33,33 @@
 		0D62654827DFF7C700362F69 = {
 			isa = PBXGroup;
 			children = (
+				0D56289327E812C1001C842D /* portfolio.html */,
+				0D7C8B2527E5B742005DA0C8 /* papers */,
 				0DF63F2727E13B6B008A65F3 /* assets */,
 				0DF63F2627E1383D008A65F3 /* script.js */,
 				0DF63F2527E1382F008A65F3 /* style.css */,
 				0DC63D5427DFFDC500E8933B /* index.html */,
 			);
+			sourceTree = "<group>";
+		};
+		0D7C8B2527E5B742005DA0C8 /* papers */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C8B2627E5B742005DA0C8 /* paper6.pdf */,
+				0D7C8B2727E5B742005DA0C8 /* paper7.pdf */,
+				0D7C8B2827E5B742005DA0C8 /* paper5.pdf */,
+				0D7C8B2927E5B742005DA0C8 /* paper1_Page_2.png */,
+				0D7C8B2A27E5B742005DA0C8 /* paper1_Page_3.png */,
+				0D7C8B2B27E5B742005DA0C8 /* paper4.pdf */,
+				0D7C8B2C27E5B742005DA0C8 /* paper1.pdf */,
+				0D7C8B2D27E5B742005DA0C8 /* paper3.pdf */,
+				0D7C8B2E27E5B742005DA0C8 /* paper1.png */,
+				0D7C8B2F27E5B742005DA0C8 /* paper2.pdf */,
+				0D7C8B3027E5B742005DA0C8 /* paper1page1.pdf */,
+				0D7C8B3127E5B742005DA0C8 /* paper9.pdf */,
+				0D7C8B3227E5B742005DA0C8 /* paper8.pdf */,
+			);
+			path = papers;
 			sourceTree = "<group>";
 		};
 		0DF63F2727E13B6B008A65F3 /* assets */ = {

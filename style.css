@@ -1,8 +1,86 @@
-.container{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.btn:hover{
+    transform:scale(1.05);
+    transition: 0.2s;
+}
+.viewcontainer{
     display: flex;
     align-items: center;
-    position: relative;
-    top: 150px;
-    left: 200px;
+    float: right;
+    width: 200px;
     
+}
+.linklist {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 500px;
+    margin: 10px 50px;
+}
+.linklist .btn {
+    width: 100px;
+    display: block;
+    background: #aaebc5;
+}
+.linklist .btn:hover{
+    background: hsl(145, 33%, 66%);
+}
+.topnav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.topnav li{
+    display:inline;
+}
+.topnav a{
+    display:inline-block;
+    padding:10px;
+}
+.topnav .btn {
+    width: 100x;
+    display: block;
+    background: #aaebc5;
+}
+.topnav .btn:hover{
+    background: hsl(145, 33%, 66%);
+}
+.gallery-title {
+    font-size:36px;
+    text-align: center;
+    padding: 20px;
+}
+.gal-buttons{
+    display: flex;
+    justify-content: center;
+}
+.filter-button {
+    font-size: 18px;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    background-color: #FAF9F6;
+    box-shadow: none !important;
+}
+.filter-button:hover {
+    background-color: #ecece9;
+}
+.filter-button:active {
+    background-color: #e7e7e5;
+}
+.objects{
+    margin: -.4em .5em;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cfcfcf;
+}
+.obj{
+    height: 200px;
+    width: 155px;
 }
