@@ -14,24 +14,125 @@
 </head>
 <body>
     <ul class="topnav">
-        <li><a class= "btn shadow" href = "index.html">home</a></li>
+        <li><a class= "btn" href = "index.html">home</a></li>
     </ul>
 
     <div class = "portfolio_container">
 
-        <div class ="gallery col-lg-12 mx-auto">
+        <div class ="gallery">
             <h1 class="gallery-title"> Portfolio</h1>
         </div>
         <div class ="gal-buttons">
-            <button class = "btn btn-default filter-button" data-filter="essays">essays</button>
-            <button class = "btn btn-default filter-button" data-filter="poetry">poetry</button>
+            <button class = "btn btn-default filter-button" data-filter="all">all</button>
+            <button class = "btn btn-default filter-button" data-filter="essay">essays</button>
+            <button class = "btn btn-default filter-button" data-filter="poem">poetry</button>
             <button class = "btn btn-default filter-button" data-filter="artwork">artwork</button>
         </div>
-        <div class = "objects">
-            <a class = "filter paper" href  = ""><img class = "obj" src = "papers/paper1.png"/></a>
-            
+        <div class = "gal-container">
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper1.pdf"><img src ="assets/papers/paper1.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper2.pdf"><img src ="assets/papers/paper2.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper3.pdf"><img src ="assets/papers/paper3.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper4.pdf"><img src ="assets/papers/paper4.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper5.pdf"><img src ="assets/papers/paper5.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper6.pdf"><img src ="assets/papers/paper6.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper7.pdf"><img src ="assets/papers/paper7.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper8.pdf"><img src ="assets/papers/paper8.png"/></a>
+            </div>
+            <div class = "gal-obj filter essay">
+                <a href = "assets/papers/paper9.pdf"><img src ="assets/papers/paper9.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem1.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem2.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem3.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem4.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem5.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem6.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem7.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem8.png"/></a>
+            </div>
+            <div class = "gal-obj filter poem">
+                <a href = ""><img src ="assets/poems/poem9.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art1.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art2.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art3.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art4.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art5.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art6.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art7.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art8.png"/></a>
+            </div>
+            <div class = "gal-obj filter artwork">
+                <a href = ""><img src ="assets/artwork/art9.png"/></a>
+            </div>
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+
+            $(".filter-button").click(function() {
+                var value = $(this).attr('data-filter');
+
+                if(value == "all"){
+                    $('.filter').show('1000');
+                }
+                else{
+                    $(".filter").not('.'+value).hide(3000);
+                    $('.filter').filter('.'+value).show('3000');
+                }
+            });
+            if ($(".filter-button").removeClass('active')){
+                $(this).removeClass('active');
+            }
+            $(this).addClass('active');
+        });
+
+    </script>
 </body>
 </html>
