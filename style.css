@@ -4,6 +4,9 @@
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;   
 }
+.btn {
+    border: 1px solid rgba(0,0,0,.4);
+}
 .btn:hover{
     transform:scale(1.08);
     transition: all 0.1s ease;
@@ -55,7 +58,6 @@
     width: 150px;
     display: block;
     box-shadow: none;
-    border: 1px solid rgba(0,0,0,.4);
 
 }
 #portfolio {
@@ -75,21 +77,9 @@
     justify-content: center;
     padding: 10px;
 }
-.topnav li{
-    display:inline;
-}
-.topnav a{
-    display:inline-block;
-    padding:10px;
-}
 .topnav .btn {
     width: 100x;
     display: block;
-    background: #aaebc5;
-}
-.topnav .btn:hover{
-    background: hsl(145, 33%, 66%);
-    box-shadow: none !important;
 }
 .gallery-title {
     font-size:36px;
