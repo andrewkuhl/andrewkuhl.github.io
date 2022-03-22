@@ -15,5 +15,183 @@
     <div class="topnav">
         <a id = "sipser" class = "btn" href = "index.html" >back</a>
     </div>  
+    <div class = "sipser-container">
+        <h1 class = "sipser-title">Sipser Computation Theory</h1>
+        <div class = "sipser-list">
+            <div class = "cfl">
+                <div class= "dcfl">
+                    <div class = "reg">
+                            <div class = "sipser-lang-obj">
+                                <h1 class = "langhead" style = "color:#665c8d; -webkit-text-stroke-color: #665c8d; ">Regular</h1>
+                                <div class = "sipser-lang-obj-content">
+                                    <p><strong>What is a regular language?</strong></p>
+                                    <br>
+                                    <div class = "sipser-def">
+                                        <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.16</strong></p>
+                                        <p>A language is called a <strong><em>regular language </em></strong> &nbsp;if some finite automaton recognizes it.</p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <p><strong>Regular Operations</strong></p>
+                                    <br>
+                                    <div class = "sipser-def">
+                                        <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.23</strong></p>
+                                        <p>
+                                            Let A and B be languages. We define the regular operations <strong>union</strong>,
+                                             <strong>concatenation</strong>, and <strong>star </strong> as follows:</p>
+                                            <ul>
+                                                <li><strong>Union:</strong> <em> &nbsp;A</em> &cup; <em>B</em>&nbsp; = &nbsp;{ &#119909; | &#119909; &#8714; <em>A </em> &nbsp;or&nbsp; &#119909; &#8714; <em>B</em> }. </li>
+                                                <li><strong>Concatenation:</strong> <em> &nbsp;A</em> 
+                                                    <span style = "font-size: 10px;position: relative; top: -4px;" >&cir;</span>
+                                                     <em>B</em>&nbsp; = &nbsp;{ &#119909;&#119910; | &#119909; &#8714; <em>A </em> &nbsp;and&nbsp; &#119910; &#8714; <em>B</em> }. </li>
+                                                <li><strong>Star:</strong> <em> &nbsp;A</em> <sup style = "font-size: 20px;left: -5px; top: -7px;">&lowast;</sup>
+                                                = &nbsp;{ &#119909;<sub style = "font-size: 13px;">1 </sub>&#119909;<sub style = "font-size: 13px;">2</sub> 
+                                                <span style = "position: relative; top:-2px">&hellip;</span> &#119909;<sub style = "font-size: 16px;">&#119896; </sub>
+                                                | &#119896; <span style = "font-size: 13px;">&#8805;</span> 0  and each &#119909;<sub style = "font-size: 16px;">&#x1D456; </sub>
+                                                &#8714; <em>A</em> }. </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <br>
+
+                                </div>
+                            </div>
+                            <div class = "sipser-obj">
+                                <h1 class = "sipser-title">DFA</h1>
+                                <div class = "sipser-obj-content">
+                                    <p class = "left">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
+                                    <span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <br>
+                                    <p style="font-size:20px"><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
+                                    &Sigma;&nbsp; is a finite <em>alphabet</em><br>
+                                    &delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em><br>
+                                    q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
+                                    <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
+                                    </p>
+                                    <br>
+                                    <p style="font-size:25px"><mark>Every state of a DFA always has&nbsp; <strong style = "color:red; -webkit-text-stroke-color: red; " > exactly one </strong> &nbsp;exiting transition arrow
+                                        <br>for each symbol in the alphabet</mark></p>
+                                    <br>
+                                    <div class = "content-img">
+                                        <p><b>simple DFA e.g.</b></p>
+                                        <img src = "assets/dfaeg.png" width = "500x"/>
+                                    </div>
+                                    <br>
+                                    <p class = "left" ><strong>Closure under Regular Operations:</strong></p>
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Union -</strong></p>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                        Assuming we taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                        <ul>
+                                            <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
+                                            <li>To do this we need to remember a pair of states instead.</li>
+                                        </ul>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                        If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
+                                    </p>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 6em;top:-.5em">
+                                        <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
+                                    </p>
+                                    <p><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
+                                    
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong> Concatenation -</strong></p>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                        Assuming we taking the concatenation of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                        <ul>
+                                            <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
+                                            <li>In order for the machine to know when to switch machines on the input it <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
+                                        </ul>
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Star -</strong></p>
+                                        <ul>
+                                            <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
+                                            <li>It works by attaching any number of strings in the Language
+                                                in order to<br> create a new string,  <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
+                                        </ul>
+                                        <br>
+                                </div>
+
+                            </div>
+                            <div class = "sipser-obj">
+                                <h1 class = "sipser-title">NFA</h1>
+                                
+                                <div class = "sipser-obj-content">
+                                    <p class = "left">A <strong><em>nondeterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
+                                    <span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <br>
+                                    <p style="font-size:20px"><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
+                                    &Sigma;&nbsp; is a finite <em>alphabet</em><br>
+                                    <mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark><br>
+                                    q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
+                                    <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
+                                    </p>
+                                    <br>
+                                    <div class = "content-img">
+                                        <p style = "top: 0em; left: -20em;"><b>simple NFA e.g.</b></p>
+                                        <img src = "assets/nfaeg.png" width = "800px"/>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <p class = "left" ><strong>Closure under Regular Operations:</strong></p>
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Union -</strong></p>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                        There is already <strong style = "color:red; -webkit-text-stroke-color: red; ">closure</strong> under DFA</p>     
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong> Concatenation -</strong></p>
+                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                        Assuming we taking the concatenation of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                        <ul>
+                                            <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
+                                        </ul>
+                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Star -</strong></p>
+                                        <ul>
+                                            <li>Attach any number of strings in the Language
+                                                in order to<br> create a new string.</li>
+                                        </ul>
+                                        <br>
+                                </div>
+                            </div>
+                        <div class = "sipser-obj">
+                            <h1 class = "sipser-title">GNFA</h1>
+                            <div class = "sipser-obj-content">
+                            </div>
+                        </div>
+                        <div class = "sipser-obj">
+                            <h1 class = "sipser-title">regex</h1>
+                            <div class = "sipser-obj-content">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "sipser-lang-obj">
+                        <h1 class = "langhead">Deterministic Context Free</h1>
+                        <div class = "sipser-lang-obj-content">
+                        </div>
+                    </div>
+                    <div class = "sipser-obj">
+                        <h1 class = "sipser-title">DCFG</h1>
+                        <div class = "sipser-obj-content">
+                        </div>
+                    </div> 
+                    <div class = "sipser-obj">
+                        <h1 class = "sipser-title">DPDA</h1>
+                        <div class = "sipser-obj-content">
+                        </div>
+                    </div>          
+                </div>
+                <div class = "sipser-lang-obj">
+                    <h1 class = "langhead">Context Free</h1>
+                    <div class = "sipser-lang-obj-content">
+                    </div>
+                </div>
+                <div class = "sipser-obj">
+                    <h1 class = "sipser-title">CFG</h1>
+                    <div class = "sipser-obj-content">
+                    </div>
+                </div>
+                <div class = "sipser-obj">
+                    <h1 class = "sipser-title">PDA</h1>
+                    <div class = "sipser-obj-content">
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
 </body>
 </html>
