@@ -300,7 +300,7 @@ b{
     font-size: 20px;
 }
 .sipser-obj{
-    margin: 5em 1em;
+    margin: 0em 1em;
     align-items: center;
 }
 .center{
@@ -336,10 +336,6 @@ mark{
     }
     .reg{
         padding: 10px;
-    }
-
-    .sipser-obj{
-        margin: 1em 0em;
     }
     .sipser-lang-obj-content{
         padding:15px;
