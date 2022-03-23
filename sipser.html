@@ -23,7 +23,7 @@
                     <div class = "reg">
                         <div class = "sipser-obj">
                             <h1 class = "sipser-title">regular</h1>
-                                <div class = "sipser-lang-obj-content">
+                                <div class = "sipser-obj-content">
                                     <p><strong>What is a regular language?</strong></p>
                                     <br>
                                     <div class = "sipser-def">
@@ -65,12 +65,14 @@
                                     <p class = "left">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
                                     <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
                                     <br>
-                                    <p style="font-size:20px"><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
-                                    &Sigma;&nbsp; is a finite <em>alphabet</em><br>
-                                    &delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em><br>
-                                    q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
-                                    <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
-                                    </p>
+                                    <span style = "text-align: left;">
+                                        <p style="font-size:20px; "><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
+                                        &Sigma;&nbsp; is a finite <em>alphabet</em><br>
+                                        &delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em><br>
+                                        q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
+                                        <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
+                                        </p>
+                                    </span>
                                     <br>
                                     <p style="font-size:25px"><mark>Every state of a DFA always has&nbsp; <strong style = "color:red; -webkit-text-stroke-color: red; " > exactly one </strong> &nbsp;exiting transition arrow
                                         <br>for each symbol in the alphabet</mark></p>
@@ -80,18 +82,20 @@
                                         <img src = "assets/dfaeg.png" width = "500x"/>
                                     </div>
                                     <br>
-                                    <p class = "left" ><strong>Closure under Regular Operations:</strong></p>
-                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Union -</strong></p>
-                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
-                                        Assuming we taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                    <p><strong>Closure under Regular Operations:</strong></p>
+
+                                    <span style = "text-align: left;"><p><strong>Union -</strong></p>
+                                    <p style = "font-size: 22px;">
+                            Assuming we taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                    </span>
                                         <ul>
                                             <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
                                             <li>To do this we need to remember a pair of states instead.</li>
                                         </ul>
-                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
+                                    <p style = "font-size: 22px;">
                                         If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
                                     </p>
-                                    <p class = "left" style = "font-size: 22px;position: relative; left: 6em;top:-.5em">
+                                    <p style = "font-size: 22px;">
                                         <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
                                     </p>
                                     <p><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
