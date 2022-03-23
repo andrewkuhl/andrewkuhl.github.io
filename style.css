@@ -189,7 +189,7 @@ b{
 .sipser-list{
     width: auto;
     justify-items: center;
-    margin: 2em 0em; 
+    margin: 2em 0em 2em 0em; 
     background-color: #A4F4DE;
     padding: 20px;
     border-radius: 10px;
@@ -201,7 +201,7 @@ b{
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.4);
-    margin: 0em auto; 
+    margin: 0em 0em 4em 0em; 
 }
 .dcfl{
     background-color: #A4BAF4;
@@ -209,15 +209,15 @@ b{
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.4);
-    margin: 0em auto; 
+    margin: 0em 0em 4em 0em; 
 }
 .reg{
     background-color: #B6A4F4;
     width: auto;
-    padding: 20px;
+    padding: 20px 5px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.4);
-    margin: 0em auto; 
+    margin: 0em 0em 4em 0em;  
 }
 .sipser-title{
     text-align: center;
@@ -283,7 +283,7 @@ b{
     font-size: 18px !important;
     font-style: italic;
     top:-1em;
-    left: 30px;
+    left: 20px;
     
     
 }
@@ -300,7 +300,7 @@ b{
     font-size: 20px;
 }
 .sipser-obj{
-    margin: 0em 1em;
+    margin: 0em 10px 3em 10px;
     align-items: center;
 }
 .center{
@@ -342,6 +342,9 @@ mark{
     }
     .sipser-obj-content{
         padding:15px;
+    }
+    .sipser-obj{
+        margin: 0em 0px 3em 0px;
     }
 
 
