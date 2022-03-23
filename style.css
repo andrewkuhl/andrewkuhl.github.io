@@ -175,15 +175,16 @@ b{
     
 }
 .content-img > img{
-    margin: -2em 0;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 10px;
 }
 .content-img > p{
+    position: absolute;
     font-size: 18px;
     text-decoration: underline;
     font-style: italic;
-    position:relative ;
-    left: -11em;
-    top: 1em;
 
 }
 .sipser-list{
@@ -253,6 +254,7 @@ b{
     text-align: left;
     font-size: 20px;
     width: 90%;
+    margin: 0 auto;
 }
 .sipser-obj-content > li {
 }
@@ -340,6 +342,4 @@ mark{
     .sipser-obj{
         margin: 0em 0px 3em 0px;
     }
-
-
 }

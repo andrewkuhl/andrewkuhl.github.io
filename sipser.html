@@ -84,30 +84,40 @@
                                     <br>
                                     <p><strong>Closure under Regular Operations:</strong></p>
 
-                                    <span style = "text-align: left;"><p><strong>Union -</strong></p>
-                                    <p style = "font-size: 22px;">
-                            Assuming we taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                    <br><p><strong>Union -</strong></p>
+                                    <span style = "text-align: left;"><p style = "font-size: 22px;">
+                            Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
                                     </span>
+                                    <br>
                                         <ul>
                                             <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
                                             <li>To do this we need to remember a pair of states instead.</li>
                                         </ul>
-                                    <p style = "font-size: 22px;">
+                                    <br><p style = "font-size: 22px;">
                                         If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
                                     </p>
                                     <p style = "font-size: 22px;">
                                         <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
                                     </p>
                                     <p><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
-                                    
-                                    <p class = "left" style = "position: relative; left: 2em;"><strong> Concatenation -</strong></p>
-                                    <p class = "left" style = "font-size: 22px;position: relative; left: 4em;">
-                                        Assuming we taking the concatenation of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                    <br>
+                                    <p><strong>Concatenation -</strong></p>
+                                    <span style = "text-align: left;"><p style = "font-size: 22px;">
+                                 Assuming we taking the concatenation of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b></p>
+                                        </span>
+                                        <br>
                                         <ul>
                                             <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
                                             <li>In order for the machine to know when to switch machines on the input it <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
                                         </ul>
-                                    <p class = "left" style = "position: relative; left: 2em;"><strong>Star -</strong></p>
+                    
+
+                                        <br>
+                                        <p><strong>Star -</strong></p>
+                                        <span style = "text-align: left;"></span><p style = "font-size: 22px;">
+                                     Assuming we taking the Kleene star of language for machine <b>M<sub>1</sub></b></p>
+                                            </span>
+                                            <br>
                                         <ul>
                                             <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
                                             <li>It works by attaching any number of strings in the Language
