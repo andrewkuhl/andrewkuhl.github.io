@@ -266,6 +266,7 @@ b{
     border: 1px solid rgba(0,0,0,.4);
     width:100%;
     padding:15px 5px 5px 5px;
+    margin: 20px 0 20px 0;
 }
 .def-title{
     position: absolute;
