@@ -83,49 +83,6 @@
                                         <p><b>simple DFA e.g.</b></p>
                                         <img src = "assets/dfaeg.png"/>
                                     </div>
-                                    <br>
-                                    <p><strong>Closure under Regular Operations:</strong></p>
-
-                                    <div class = "closure">
-                                        <br><p><strong>Union -</strong></p>
-                                        <p style = "text-align: center;">
-                                        Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
-                                        </p>
-                                        <br>
-                                        <ul>
-                                            <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
-                                            <li>To do this we need to remember a pair of states instead.</li>
-                                        </ul>
-                                    <br><p style = "font-size: 22px; text-align: center;">
-                                        If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
-                                    
-                                        <br>
-                                        <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
-                                    </p>
-                                    <p style = "text-align: center;"><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
-                                    <br>
-                                    <p><strong>Concatenation -</strong></p>
-                                    <p style = "text-align: center;">
-                                    Assuming we concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
-                                    </p> 
-                                        <br>
-                                        <ul>
-                                            <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
-                                            <li>In order for the machine to know when to switch machines on the input it <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
-                                        </ul>
-                    
-
-                                        <br>
-                                        <p><strong>Star -</strong></p>
-                                        <p style = "text-align: center;">
-                                        Assuming we taking the Kleene star of language for machine <b>M<sub>1</sub></b></p>
-                                            <br>
-                                        <ul>
-                                            <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
-                                            <li>It works by attaching any number of strings in the Language
-                                                in order to<br> create a new string,  <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
-                                        </ul>
-                                    </div>
                             </div>
                             <!-- END DFA -->
                             <br><br>
@@ -149,22 +106,105 @@
                                         <p><b>simple NFA e.g.</b></p>
                                         <img src = "assets/nfaeg.png"/>
                                     </div>
-                                    <br>
-                                    <p><strong>Closure under Regular Operations:</strong></p>
-                                    <div class = "closure">
-                                        <br><p><strong>Union -</strong></p>                                 
-                                        <br><p><strong>Concatenation -</strong></p>
-                                        <br><p><strong>Star -</strong></p>
-                                        
-                                    </div>
                                 </div>
                             </div>
                             <!-- END NFA -->
+                        </div>
+                        <div class = "sipser-obj">
+                            <h1 class = "sipser-title">Regular Operations</h1>
+                            <div class = "sipser-obj-content">
+                                <p><strong>Closure under Regular Operations:</strong></p>
+
+                                <div class = "closure">
+                                    <br><p><strong>Union -</strong></p>
+                                    <p style = "text-align: center;">
+                                    Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
+                                        <li>To do this we need to remember a pair of states instead.</li>
+                                    </ul>
+                                <br><p style = "font-size: 22px; text-align: center;">
+                                    If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
+                                
+                                    <br>
+                                    <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
+                                </p>
+                                <p style = "text-align: center;"><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
+                                <br>
+                                <p><strong>Concatenation -</strong></p>
+                                <p style = "text-align: center;">
+                                Assuming we concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
+                                </p> 
+                                    <br>
+                                    <ul>
+                                        <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
+                                        <li>In order for the machine to know when to switch machines on the input it <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
+                                    </ul>
+                
+
+                                    <br>
+                                    <p><strong>Star -</strong></p>
+                                    <p style = "text-align: center;">
+                                    Assuming we taking the Kleene star of language for machine <b>M<sub>1</sub></b></p>
+                                        <br>
+                                    <ul>
+                                        <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
+                                        <li>It works by attaching any number of strings in the Language
+                                            in order to<br> create a new string,  <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                             <!-- REGEX -->
                         <div class = "sipser-obj">
                             <h1 class = "sipser-title">regex</h1>
                             <div class = "sipser-obj-content">
+                                <br>
+                                <div class = "sipser-def">
+                                    <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.23</strong></p>
+                                    <div class = "def-content">
+                                        <p>
+                                            Say that <em>R</em> is a <strong><em>regular expression</em></strong> if <em>R</em> is <br>
+                                        </p>
+                                            <ul style = "overflow: hidden;">
+                                                <li><strong>1.</strong> &nbsp;&#119886; for some &#119886; in the alphabet &Sigma;,</li>
+                                                <li><strong>2.</strong>&nbsp; &epsi;</li>
+                                                <li><strong>3.</strong>&nbsp; Ø</li>
+                                                <li><strong>4.</strong>&nbsp; (<em>R</em><sub>1</sub> &Union; <em>R</em><sub>2</sub>),
+                                                where <em>R</em><sub>1</sub> and <em>R</em><sub>2</sub> are regular expressions,
+                                                </li>
+                                                <li><strong>5.</strong>&nbsp; (<em>R</em><sub>1</sub> 
+                                                    <span style = "font-size: 10px;position: relative; top: -4px;" >&cir;</span>
+                                                    <em>R</em><sub>2</sub>),
+                                                    where <em>R</em><sub>1</sub> and <em>R</em><sub>2</sub> are regular expressions,
+                                                    </li>
+                                                <li><strong>6.</strong>&nbsp; (<em>R</em><sub>1</sub>
+                                                    <sup style = "font-size: 20px;left: -5px; top: -7px;">&lowast;</sup>),
+                                                    where <em>R</em><sub>1</sub> is a regular expression.
+                                                    </li>
+                                            </ul>
+                                            <p>
+                                            In items 1 and 2, the regular expressions &#119886; and &epsi; represent the 
+                                            languages {&#119886;} and {&epsi;}, respectively.  In  item 3, the regular expression 
+                                            Ø represents the empty language.
+                                            </p>
+                                    </div>
+                                </div>
+                                <br>
+                                <p>
+                                    <mark>
+                                        Don't confuse the regular expressions &epsi; and Ø
+
+                                    </mark>
+                                </p>
+                                <br>
+                                <p><strong>(0 <span style="font-size: 20px;">U</span> 1)
+                                    <sup style = "font-size: 20px;left: -5px; top: -16px;">&lowast;</sup>
+                                </strong></p>
+                                <p>An example of a regular expression whos value represents a language that consists of
+                                    all possible strings of 0's and 1's</p>
                             </div>
                         </div>
                         <!-- ENDREGEX -->
