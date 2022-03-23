@@ -170,7 +170,7 @@ b{
 .sipser-container{
     width: 100%;
     height: 100%;
-    margin: 1em auto;
+    margin: 1em 0 0 0;
     text-align: center;
     
 }
@@ -178,11 +178,11 @@ b{
     position: relative;
     max-width: 600px;
     width: 100%;
-    margin: 0 10px;
+    margin: 10px 0;
 }
 .content-img > p{
     position: absolute;
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: underline;
     font-style: italic;
 
@@ -190,7 +190,7 @@ b{
 .sipser-list{
     width: auto;
     justify-items: center;
-    margin: 2em 0em 2em 0em; 
+    margin: 2em 0em 0em 0em; 
     background-color: #A4F4DE;
     padding: 20px;
     border-radius: 10px;
@@ -202,7 +202,7 @@ b{
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.4);
-    margin: 0em 0em 4em 0em; 
+    margin: 0em 0em 0em 0em; 
 }
 .dcfl{
     background-color: #A4BAF4;
@@ -246,17 +246,15 @@ b{
 .sipser-obj-content:hover{
     cursor: pointer;
 }
-.sipser-lang-obj-content:hover{
-    cursor: pointer;
+.closure{
+    text-align: left;
 }
-.sipser-obj-content > ul {
+.closure > ul {
     position:relative;
     text-align: left;
     font-size: 20px;
     width: 90%;
     margin: 0 auto;
-}
-.sipser-obj-content > li {
 }
 .sipser-def{
     position: relative;
@@ -303,7 +301,7 @@ b{
     text-align: center!important;
 }
 .left{
-    text-align:left;
+    text-align:left!important;
 }
 .langhead {
     font-weight: 900;
