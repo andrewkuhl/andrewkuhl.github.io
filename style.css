@@ -305,7 +305,16 @@ b{
 .def-content > ul {
     position:relative;
     font-size: 20px;
+    margin: 0 auto;
+    left: 10px;
 }
+.def-content > ol {
+    position:relative;
+    font-size: 20px;
+    margin: 0 auto;
+    left: 10px;
+}
+
 .sipser-obj{
     margin: 0em 10px 3em 10px;
     align-items: center;
@@ -313,8 +322,7 @@ b{
 .sipser-obj-content > ol {
     position:relative;
     font-size: 20px;
-    width: 80%;
-    margin: 0 auto;
+    left: 15px;
     text-align: left;
 }
 .center{
