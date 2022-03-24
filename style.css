@@ -253,6 +253,15 @@ b{
 .closure{
     text-align: left;
 }
+.closure-obj{
+
+}
+.title{
+    font-size: 26px;
+}
+.closure-content{
+
+}
 .closure > ul {
     position:relative;
     text-align: left;

@@ -25,7 +25,7 @@
                         <div class = "sipser-obj">
                             <h1 class = "sipser-title" style = "color: #5B527A; -webkit-text-stroke-color: #5B527A;">Regular</h1>
                                 <div class = "sipser-obj-content">
-                                    <p><strong>What is a Regular Language?</strong></p>
+                                    <p class = "title"><strong>What is a Regular Language?</strong></p>
                                     <div class = "sipser-def">
                                         <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.16</strong></p>
                                         <div class = "def-content">
@@ -40,8 +40,8 @@
                             <div class = "sipser-obj">
                                 <h1 class = "sipser-title">DFA</h1>
                                 <div class = "sipser-obj-content">
-                                    <p class = "left">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
-                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <p class = "left title">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
+                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span></p>
                                     <br>
                                     <ol type="1">
                                         <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
@@ -65,8 +65,8 @@
                             <div class = "sipser-obj">
                                 <h1 class = "sipser-title">NFA</h1>
                                 <div class = "sipser-obj-content">
-                                    <p class = "left">A <strong><em>nondeterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
-                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <p class = "left title">A <strong><em>nondeterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
+                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>,</p>
                                     <br>
                                     <ol type="1">
                                         <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
@@ -108,47 +108,27 @@
                                             </p>
                                         </div>
                                     </div>
-                                <p><strong>Closure under Regular Operations:</strong></p>
+                                <p class = "title"><strong>Closure under Regular Operations:</strong></p>
 
                                 <div class = "closure">
-                                    <br><p><strong>Union -</strong></p>
-                                    <p style = "text-align: center;">
-                                    Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
-                                    </p>
-                                    <br>
-                                    <ul>
-                                        <li>As inputs arive,  simulate the input on both <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b> &nbsp;<strong><em>simultaneously</em></strong>.</li>
-                                        <li>To do this we need to remember a pair of states instead.</li>
-                                    </ul>
-                                <br><p style = "font-size: 22px; text-align: center;">
-                                    If <b>M<sub>1</sub></b> has &#119896;<sub>1</sub> states and <b>M<sub>2</sub></b> has &#119896;<sub>2</sub> states,
-                                
-                                    <br>
-                                    <b>M<sub>1</sub></b> &cup; <b>M<sub>2</sub></b> has &#119896;<sub>1</sub> × &#119896;<sub>2</sub> states.
-                                </p>
-                                <p style = "text-align: center;"><strong style = "color:red; -webkit-text-stroke-color: red; ">closed!</strong></p>
-                                <br>
-                                <p><strong>Concatenation -</strong></p>
-                                <p style = "text-align: center;">
-                                Assuming we are concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
-                                </p> 
-                                    <br>
-                                    <ul>
-                                        <li>To concatenate the two machines we add <b>M<sub>2</sub></b> to the end of <b>M<sub>1</sub></b>.</li>
-                                        <li>In order for the machine to know when to switch machines on the input it <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
-                                    </ul>
-                
-
-                                    <br>
-                                    <p><strong>Star -</strong></p>
-                                    <p style = "text-align: center;">
-                                    Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b>,</p>
-                                        <br>
-                                    <ul>
-                                        <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
-                                        <li>It works by attaching any number of strings in the Language
-                                            in order to<br> create a new string,  <strong style = "color:red; -webkit-text-stroke-color: red; ">requires nondeterminism!</strong></li>
-                                    </ul>
+                                    <div class = "closure-obj">
+                                        <p class = "title"><strong>Union -</strong></p>
+                                        <p class = "closure-content">
+                                            Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
+                                        </p>
+                                    </div>
+                                    <div class = "closure-obj">
+                                        <p class = "title"><strong>Concatenation -</strong></p>
+                                        <p class = "closure-content">
+                                            Assuming we are concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
+                                        </p>
+                                    </div>
+                                    <div class = "closure-obj">
+                                        <p class = "title"><strong>Star -</strong></p>
+                                        <p class = "closure-content">
+                                            Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b>,
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +167,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <p>
+                                <p class = "title">
                                     <mark>
                                         Don't confuse the regular expressions &epsi; and Ø!
 
@@ -222,7 +202,7 @@
                 <div class = "sipser-obj">
                     <h1 class = "sipser-title" style = "color: #52717A; -webkit-text-stroke-color: #52717A;">Context Free</h1>
                     <div class = "sipser-obj-content">
-                        <p><strong>What is a Context Free Language?</strong></p>
+                        <p class = "title"><strong>What is a Context Free Language?</strong></p>
                             <div class = "sipser-def">
                                 <p class = "def-title">andrew gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.01</strong></p>
                                 <div class = "def-content">
@@ -239,8 +219,8 @@
                 <div class = "sipser-obj">
                     <h1 class = "sipser-title">CFG</h1>
                     <div class = "sipser-obj-content">
-                        <p class = "left">A <strong><em>context free grammar</em></strong> is a <strong>4-tuple</strong>
-                        <br><span style="font-size:35px">(<em>V</em>, &Sigma;, <em>R</em>, <em>S</em> )</span> where, </p>
+                        <p class = "left title">A <strong><em>context free grammar</em></strong> is a <strong>4-tuple</strong>
+                        <br><span style="font-size:35px">(<em>V</em>, &Sigma;, <em>R</em>, <em>S</em> )</span>,</p>
                         <br>
                                 <ol type="1">
                                     <li><em>V</em> &nbsp;is a finite set called the <strong><em>variables</em></strong>,</li>
@@ -264,7 +244,7 @@
                             </div>
                         </div>
                         <br>
-                        <p> What is the simplified form?</p>
+                        <p class = "title"> What is the simplified form?</p>
                         <div class = "sipser-def">
                             <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>2.8</strong></p>
                             <div class = "def-content">
@@ -290,13 +270,13 @@
                 <div class = "sipser-obj">
                     <h1 class = "sipser-title">PDA</h1>
                     <div class = "sipser-obj-content">
-                        <p class = "left">A <strong><em>pushdown automaton</em></strong> is a <strong>6-tuple</strong>
-                        <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, Γ, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span> where, </p>
+                        <p class = "left title">A <strong><em>pushdown automaton</em></strong> is a <strong>6-tuple</strong>
+                        <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, Γ, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>, </p>
                         <br>
                             <ol type="1">
-                                <li><em>Q</em> is the set of states,</li>
-                                <li>&Sigma; is the input alphabet,</li>
-                                <li>Γ is the <em>stack</em> alphabet,</li>
+                                <li><em>Q</em>&nbsp; is the set of states,</li>
+                                <li>&Sigma;&nbsp;&nbsp;is the input alphabet,</li>
+                                <li>Γ &nbsp;is the <em>stack</em> alphabet,</li>
                                 <li>&delta;: <em>Q</em> x &Sigma;<sub>&epsi;</sub> x Γ<sub>&epsi;</sub> &rarr; <em>P</em> ( <em>Q</em> x Γ<sub>&epsi;</sub> ) is the transition function,</li>
                                 <li><em>q</em><sub>0</sub> &#8714; <em>Q</em> is the <em> start state,</em></li>
                                 <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states.</em></li>
@@ -312,7 +292,7 @@
                             <img src = "assets/pdaeg.png"/>
                         </div>
                         <br>
-                         <p>The transition function for a PDA takes the form: </p>
+                         <p class = "title">The transition function for a PDA takes the form: </p>
                          <p><mark><strong>read , pop &rarr; push</strong></mark></p>
                          <br>
                          <p>read being replaced with a character that from the input alphabet, &Sigma;<sub>&epsi;</sub>, that is read to the machine,</p>
