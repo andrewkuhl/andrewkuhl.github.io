@@ -268,7 +268,7 @@ b{
     justify-content: center;
     text-align: center;
     border: 1px solid rgba(0,0,0,.4);
-    width:100%;
+    width:70%;
     padding:15px 5px 5px 5px;
     margin: 20px 0 20px 0;
 }
@@ -298,9 +298,12 @@ b{
     margin: 0em 10px 3em 10px;
     align-items: center;
 }
-.sipser-obj-content > p > ul {
+.sipser-obj-content > ol {
     position:relative;
     font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
 }
 .center{
     text-align: center!important;
@@ -344,5 +347,8 @@ mark{
     }
     .sipser-obj{
         margin: 0em 0px 3em 0px;
+    }
+    .sipser-def{
+        width: 100%;
     }
 }

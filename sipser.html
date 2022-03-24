@@ -43,14 +43,13 @@
                                     <p class = "left">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
                                     <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
                                     <br>
-                                    <span style = "text-align: left;">
-                                        <p style="font-size:20px; "><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
-                                        &Sigma;&nbsp; is a finite <em>alphabet</em><br>
-                                        &delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em><br>
-                                        q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
-                                        <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
-                                        </p>
-                                    </span>
+                                    <ol type="1">
+                                        <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
+                                        <li>&Sigma;&nbsp; is a finite <em>alphabet</em></li>
+                                        <li>&delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em></li>
+                                        <li>q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
+                                        <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
+                                    </ol>
                                     <br>
                                     <p style="font-size:25px"><mark>Every state of a DFA always has&nbsp; <strong style = "color:red; -webkit-text-stroke-color: red; " > exactly one </strong> &nbsp;exiting transition arrow
                                         <br>for each symbol in the alphabet</mark></p>
@@ -69,14 +68,14 @@
                                     <p class = "left">A <strong><em>nondeterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
                                     <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
                                     <br>
-                                    <span style = "text-align: left;">
-                                        <p style="font-size:20px; "><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
-                                        &Sigma;&nbsp; is a finite <em>alphabet</em><br>
-                                        <mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark><br>
-                                        q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
-                                        <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
-                                        </p>
-                                    </span>
+                                    <ol type="1">
+                                        <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
+                                        <li>&Sigma;&nbsp; is a finite <em>alphabet</em></li>
+                                        <li><mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark></li>
+                                        <li>q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
+                                        <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
+                                    </ol>
+
                                     <br>
                                     <div class = "content-img">
                                         <p><b>simple NFA e.g.</b></p>
@@ -114,7 +113,7 @@
                                 <div class = "closure">
                                     <br><p><strong>Union -</strong></p>
                                     <p style = "text-align: center;">
-                                    Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
+                                    Assuming we are taking the union of machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
                                     </p>
                                     <br>
                                     <ul>
@@ -131,7 +130,7 @@
                                 <br>
                                 <p><strong>Concatenation -</strong></p>
                                 <p style = "text-align: center;">
-                                Assuming we are concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>
+                                Assuming we are concatenating strings of the languages for machines <b>M<sub>1</sub></b> and <b>M<sub>2</sub></b>,
                                 </p> 
                                     <br>
                                     <ul>
@@ -143,7 +142,7 @@
                                     <br>
                                     <p><strong>Star -</strong></p>
                                     <p style = "text-align: center;">
-                                    Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b></p>
+                                    Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b></p>,
                                         <br>
                                     <ul>
                                         <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
@@ -190,7 +189,7 @@
                                 <br>
                                 <p>
                                     <mark>
-                                        Don't confuse the regular expressions &epsi; and Ø
+                                        Don't confuse the regular expressions &epsi; and Ø!
 
                                     </mark>
                                 </p>
@@ -199,7 +198,7 @@
                                     <img src = "assets/regexeg.png"/>
                                 </div>
                                 <p>An example of a regular expression whos value represents a language that consists of
-                                    all possible strings of 0's and 1's</p>
+                                    all possible strings of 0's and 1's.</p>
                             </div>
                         </div>
                         <!-- ENDREGEX -->
@@ -241,27 +240,27 @@
                     <h1 class = "sipser-title">CFG</h1>
                     <div class = "sipser-obj-content">
                         <p class = "left">A <strong><em>context free grammar</em></strong> is a <strong>4-tuple</strong>
-                        <br><span style="font-size:35px">(<em>V</em>, &Sigma;, <em>R</em>, <em>S</em> )</span>, where </p>
+                        <br><span style="font-size:35px">(<em>V</em>, &Sigma;, <em>R</em>, <em>S</em> )</span> where, </p>
                         <br>
-                        <span style = "text-align: left;">
-                            <p style="font-size:20px; ">
-                                <em>V</em> &nbsp;is a finite set called the <strong><em>variables</em></strong>,<br>
-                                &Sigma;&nbsp;is a finite set, disjoint from <em>V</em>, called the <strong><em>terminals</em></strong>,<br>
-                                <em>R</em>&nbsp; is a finite set of <strong><em>rules</em></strong>, with each rule being a variable<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pointing to a string of variables and terminals,<br>
-                                <em>S</em>&nbsp;&#8714;<em>V</em> &nbsp;is the start variable.<br>
-                            </p>
-                        </span>
+                                <ol type="1">
+                                    <li><em>V</em> &nbsp;is a finite set called the <strong><em>variables</em></strong>,</li>
+                                    <li>&Sigma;&nbsp;is a finite set, disjoint from <em>V</em>, called the <strong><em>terminals</em></strong>,</li>
+                                    <li><em>R</em>&nbsp; is a finite set of <strong><em>rules</em></strong>,
+                                         with each rule being a variable pointing to a string of variables and terminals,</li>
+                                    <li><em>S</em>&nbsp;&#8714;<em>V</em> &nbsp;is the start variable.<br></li>
+                                </ol>
                         <br>
                         <div class = "content-img">
                             <p><b>simple CFG e.g.</b></p>
                             <img src = "assets/cfgeg.png"/>
                         </div>
+                        <p style="font-size: 20px;">EXPR &nbsp;<mark><strong><em>yields</em></strong></mark> &nbsp;three rules: &nbsp;(EXPR) + (EXPR) &nbsp;| &nbsp;(EXPR) x (EXPR) &nbsp;| &nbsp;(EXPR).</p>
                         <br>
                         <div class = "sipser-def">
                             <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>2.7</strong></p>
                             <div class = "def-content">
-                                <p>If a grammar <em>G</em> can derive a string <em>w</em> <em>ambiguously</em>,
-                                     more than one way, Grammar <em>G</em> is <strong><em>ambiguous</em></strong></p>
+                                <p>If a grammar <em>G</em>&nbsp; can derive a string <em>w</em> <em>ambiguously</em>,
+                                     more than one way, Grammar <em>G</em> is <strong><em>ambiguous</em></strong>.</p>
                             </div>
                         </div>
                     </div>
