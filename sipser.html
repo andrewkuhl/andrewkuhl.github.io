@@ -416,7 +416,7 @@
                             <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>2.8</strong></p>
                             <div class = "def-content">
                                 <p>
-                                    A context free grammar is in <strong><em>Chomsky normal form</em></strong> if every rule is of the form,<br>
+                                    A context free grammar is in <strong><em>Chomsky normal form</em></strong>&nbsp; if every rule is of the form,<br>
                                 </p>
                                 <p style="text-align: center;">
                                     <em>A</em> &rarr; <em>BC</em><br>
@@ -429,6 +429,15 @@
                                 </p>
                             </div>
                         </div>
+                        <br>
+                        <p>Conversion from CFG to CNF:</p>
+                        <ol type = "1">
+                            <li>Replace the start symbol with a new start symbol to remove cases where start symbol is on the right side,</li>
+                            <li>Replace rules with more than two variables with containing rules to shorten each rule to two variables,</li>
+                            <li>Eliminate rules with more than two terminals the same way,</li>
+                            <li>Remove epsilon rules by replacing all variables that contain epsilon with their rules,</li>
+                            <li>Remove unit rules.</li>
+                        </ol>
                     </div>
                 </div>
                 <!-- END CFG-->
