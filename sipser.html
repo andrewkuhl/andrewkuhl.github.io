@@ -33,7 +33,79 @@
                                                 if some finite automaton recognizes it.</p>
                                         </div>
                                     </div>
+                                    <br>
                                     <p> What languages aren't regular?</p>
+                                    <br>
+                                    <p class = "title"><strong>The Pumping Lemma for Regular Languages</strong></p>
+                                    <div class = "sipser-def">
+                                        <p class = "def-title" style = "width: 150px;">sipser lemma</p>
+                                        <div class = "def-content">
+                                            
+                                            <p>
+                                                If <em>A</em>&nbsp; is a regular language, then there is a number <em>p</em> &nbsp;(the pumping length) where if <em>s</em> &nbsp;is any string in
+                                                <em>A</em> of length at least <em>p</em>, then <em>s</em> &nbsp;may be divided into three pieces, 
+                                                <em>s</em> = <em>x</em><em>y</em><em>z</em>, satisfying the following conditions:
+                                            </p>
+                                            <ol type = "1">
+                                                <li>for each <span style="font-size: 26px;">&#x1D456;</span> <span style="font-size: 15px;">&ge;</span> 0, <em>x</em><em>y</em><sup style="right:-3px;font-size:16px;">&#x1D456;</sup><em>z</em>
+                                                    &#8714; <em>A</em>,
+                                                </li>
+                                                <li>
+                                                    |<em>y</em> | > 0,
+                                                </li>
+                                                <li>|<em>x</em><em>y</em> | <span style="font-size: 15px;">&le;</span> <em>p</em>.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class = "closure">
+                                        <div class = "closure-obj">
+                                            <p class = "title">e.g.</p>
+                                            <div class = "closure-content">
+                                                <p>
+                                                    let <em>B</em> be the language {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0},
+                                                    <br>
+                                                    and let <em>p</em>, the pumping length, be the number of states of the machine that recognizes <em>B</em>.
+                                                </p>
+                                                <br>
+                                                <ol start="1">
+                                                    <li>
+                                                        Choose a string that is in the language <em>B</em>, and that satisfies the conditions set above,
+                                                    </li>
+                                                </ol>
+                                                <br>
+                                                <p class = "center">
+                                                    let <em>s</em> be the string 0<sup><em>p</em></sup> 1<sup><em>p</em></sup>
+                                                </p>
+                                                <br>
+                                                <ol start="2">
+                                                    <li>
+                                                        Split the string into <em>x</em><em>y</em><em>z</em>,
+                                                    </li>
+                                                </ol>
+                                                <br>
+                                                <p class ="center">
+                                                    we can set <em>x</em>&nbsp; to 0,<br>
+                                                    and set <em>z</em>&nbsp; to 1,<br>
+                                                    but with <em>y</em>,
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    if we choose either 0 or 1 to be repeated, the string <em>xyyz</em> &nbsp;(0111 or 0001) is no longer a member of the
+                                                    language,
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    Since this violates condition 1 of the lemma, the language {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0}
+                                                    is <strong><mark>not regular</mark></strong>
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    If this language was regular it would be able to repeat the middle section of the string without violating condition 1.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- DFA -->
@@ -81,6 +153,18 @@
                                         <p><b>simple NFA e.g.</b></p>
                                         <img src = "assets/nfaeg.png"/>
                                     </div>
+                                    <br>
+                                    <p>
+                                        The symbol that was added to the alphabet in the transition function, and the symbol on the picture above is<br>
+                                        <br>
+                                        <span style = "font-size: 40px;"><mark>epsilon &epsi;</mark></span>
+                                        <br>
+                                        <br>
+                                        Nondeterminism brings with it epsilon, which represents an empty string.<br><br>
+                                        Not to be confused with Ø which represents the lack of a string.
+                                    </p>
+                                    
+                                    
                                 </div>
                             </div>
                             <!-- END NFA -->

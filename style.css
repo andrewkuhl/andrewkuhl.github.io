@@ -259,8 +259,10 @@ b{
 .title{
     font-size: 26px;
 }
-.closure-content{
-
+.closure-content > ol{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
 .closure > ul {
     position:relative;
@@ -310,7 +312,7 @@ b{
 .sipser-obj-content > ol {
     position:relative;
     font-size: 20px;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     text-align: left;
 }
