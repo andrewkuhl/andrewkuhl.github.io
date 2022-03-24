@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;   
+    line-height: 2;
 }
 .btn {
     border: 1px solid rgba(0,0,0,.4);

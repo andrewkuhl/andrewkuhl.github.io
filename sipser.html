@@ -123,8 +123,9 @@
                                         <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
                                     </ol>
                                     <br>
-                                    <p style="font-size:25px"><mark>Every state of a DFA always has&nbsp; <strong style = "color:red; -webkit-text-stroke-color: red; " > exactly one </strong> &nbsp;exiting transition arrow
-                                        <br>for each symbol in the alphabet</mark></p>
+                                    <p style="font-size:25px"><mark><strong>Every state of a DFA always has&nbsp;
+                                         <span style = "color:red; -webkit-text-stroke-color: red; " > exactly one </span> &nbsp;exiting transition arrow
+                                        <br>for each symbol in the alphabet</strong></mark></p>
                                     <br>
                                     <div class = "content-img">
                                         <p><b>simple DFA e.g.</b></p>
@@ -143,7 +144,7 @@
                                     <ol type="1">
                                         <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
                                         <li>&Sigma;&nbsp; is a finite <em>alphabet</em></li>
-                                        <li><mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark></li>
+                                        <li>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></li>
                                         <li><em>q</em><sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
                                         <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
                                     </ol>
@@ -161,7 +162,8 @@
                                         <br>
                                         <br>
                                         Nondeterminism brings with it epsilon, which represents an empty string.<br><br>
-                                        Not to be confused with Ø which represents the lack of a string.
+                                        Not to be confused with Ø which represents the lack of a string.<br><br>
+                                        Epsilon transitions allow the machine to switch states without reading any input.
                                     </p>
                                     
                                     
@@ -252,10 +254,10 @@
                                 </div>
                                 <br>
                                 <p class = "title">
-                                    <mark>
+                                    <mark><strong>
                                         Don't confuse the regular expressions &epsi; and Ø!
 
-                                    </mark>
+                                    </strong></mark>
                                 </p>
                                 <br>
                                 <div class = "content-img">
@@ -293,10 +295,91 @@
                                     <p>A language is called a <strong><em>context free language </em></strong> &nbsp;
                                         if some context free grammar or pushdown automaton recognizes it.</p>
                                 </div>
-
-                                
                             </div>
+                            <br>
+                            <p>
+                                With regular languages, we looked at the language 
+                                {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0}
+                                 and determined it was not regular. 
+                            </p>
+                            <br>
+                            <p>
+                                Using the newfound computing power of context free languages we find that there is a context free grammar up to the task,
+                                <br>
+                                <br>
+                                <em>S</em> &rarr; <em>S<sub>1</sub></em> | <em>S<sub>2</sub></em><br>
+                                <em>S<sub>1</sub></em> &rarr; 0 <em>S<sub>1</sub></em> 1 | &epsi;<br>
+                                <em>S<sub>2</sub></em> &rarr; 1 <em>S<sub>2</sub></em> 0 | &epsi;<br>
+                                <br>
+                                Therefore the language {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0} 
+                                is <strong><mark>context free</mark></strong> but,
+                            </p>
+                            <br>
                             <p> What languages aren't context free?</p>
+                                    <br>
+                                    <p class = "title"><strong>The Pumping Lemma for Context Free Languages</strong></p>
+                                    <div class = "sipser-def">
+                                        <p class = "def-title" style = "width: 150px;">sipser lemma</p>
+                                        <div class = "def-content">
+                                            
+                                            <p>
+                                                If <em>A</em>&nbsp; is a context free language, then there is a number <em>p</em> &nbsp;(the pumping length) where if <em>s</em> &nbsp;is any string in
+                                                <em>A</em> of length at least <em>p</em>, then <em>s</em> &nbsp;may be divided into <strong><mark>five</mark></strong> pieces, 
+                                                <em>s</em> = <em>uvxyz</em>, satisfying the following conditions:
+                                            </p>
+                                            <ol type = "1">
+                                                <li>for each <span style="font-size: 26px;">&#x1D456;</span> <span style="font-size: 15px;">&ge;</span> 0,
+                                                     <em>uv<sup style="right:-3px;font-size:16px;">&#x1D456;</sup>xy<sup style="right:-3px;font-size:16px;">&#x1D456;</sup>z</em>
+                                                    &#8714; <em>A</em>,
+                                                </li>
+                                                <li>
+                                                    |<em>vy</em> | > 0,
+                                                </li>
+                                                <li>|<em>vxy</em> | <span style="font-size: 15px;">&le;</span> <em>p</em>.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class = "closure">
+                                        <div class = "closure-obj">
+                                            <p class = "title">e.g.</p>
+                                            <div class = "closure-content">
+                                                <p>
+                                                    let <em>B</em> be the language {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> 2<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0},
+                                                </p>
+                                                <br>
+                                                <ol start="1">
+                                                    <li>
+                                                        Choose a string that is in the language <em>B</em>, and that satisfies the conditions set above,
+                                                    </li>
+                                                </ol>
+                                                <br>
+                                                <p class = "center">
+                                                    let <em>s</em> be the string 0<sup><em>p</em></sup> 1<sup><em>p</em></sup> 2<sup><em>p</em></sup>
+                                                </p>
+                                                <br>
+                                                <ol start="2">
+                                                    <li>
+                                                        Split the string into <em>uvxyz</em>,
+                                                    </li>
+                                                </ol>
+                                                <br>
+                                                <p class ="center">
+                                                    we find that there is no way to have the same number of 0's, 1's, and 2's without messing up the order, which matters in the language.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    Since this violates condition 1 of the lemma, the language {0<sup><em>n</em></sup> 1<sup><em>n</em></sup> 
+                                                        2<sup><em>n</em></sup> | <em>n</em> <span style="font-size: 15px;">&ge;</span> 0}
+                                                    is <strong><mark>not context free</mark></strong>
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    If this language was context free it would be able to repeat <em>v</em> and <em>y</em> of the string without violating condition 1.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                     </div>
                 </div>
                 <!-- CFG-->
@@ -367,8 +450,10 @@
                             </ol>
                         <br>
                         <p>
-                            The formal definition of a pushdown automaton is similar to that of a nondeterministic finite automaton, except for the <strong>stack</strong>.<br><br>
-                            A stack is valuable because for theoretical purposes we allow it to hold an <mark><em>unlimited amount of information</em></mark>.
+                            The formal definition of a pushdown automaton is <strong><mark>EQUAL</mark></strong> to that of a nondeterministic finite automaton, except for the <strong>stack</strong>.<br><br>
+                            Which means that automatically every NFA is a PDA that doesn't use the stack,<br>
+                            This creates a relationship between the regular and context free languages, which is <strong><mark>every regular language is a context free language.</mark></strong><br><br>
+                            A stack is valuable because for theoretical purposes we allow it to hold an <mark><strong>unlimited amount of information</strong></mark>.
                         </p>
                         <br>
                         <div class = "content-img">
