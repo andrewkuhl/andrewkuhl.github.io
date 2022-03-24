@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0, 
+        user-scalable=no" />
+  <title>Drag/Drop/Bounce</title>
+  <style>
+    #container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 7px;
+      touch-action: none;
+    }
+    #item {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(245, 230, 99);
+      border: 10px solid rgba(136, 136, 136, .5);
+      border-radius: 50%;
+      touch-action: none;
+      user-select: none;
+    }
+    .linklist {
+    display: grid;
+    justify-items: center;
+    padding:20px;
+    width: 200px;
+    margin: -20px auto;
+    gap: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 26px;
+    background-color: rgba(255, 255, 255, 0.89);
+    border: 1px solid rgba(0,0,0,.4);
+    border-top-width:15px;
+    
+}
+  </style>
+</head>
+
+<body>
+
+  <div id="outerContainer">
+    <div id="container">
+        <div class = "list-container">
+          <div id = "item">
+            <div class = "linklist">
+                <a id = "portfolio" class = "btn" href = "portfolio.html" >portfolio e.g.</a>
+                <a id = "hash" class = "btn" href = "hash.html" >hash table</a>
+                <a id = "bst" class = "btn" href = "bst.html" >binary search tree</a>
+                <a id = "sipser" class = "btn" href = "sipser.html" >sipser computation</a>
+            </div>  
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    var dragItem = document.querySelector("#item");
+    var container = document.querySelector("#container");
+
+    var active = false;
+    var currentX;
+    var currentY;
+    var initialX;
+    var initialY;
+    var xOffset = 0;
+    var yOffset = 0;
+
+    container.addEventListener("touchstart", dragStart, false);
+    container.addEventListener("touchend", dragEnd, false);
+    container.addEventListener("touchmove", drag, false);
+
+    container.addEventListener("mousedown", dragStart, false);
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", drag, false);
+
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+
+      if (e.target === dragItem) {
+        active = true;
+      }
+    }
+
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+
+      active = false;
+    }
+
+    function drag(e) {
+      if (active) {
+      
+        e.preventDefault();
+      
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, dragItem);
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  </script>
+</body>
+
+</html>
