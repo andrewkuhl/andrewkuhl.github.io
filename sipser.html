@@ -26,14 +26,14 @@
                             <h1 class = "sipser-title" style = "color: #5B527A; -webkit-text-stroke-color: #5B527A;">Regular</h1>
                                 <div class = "sipser-obj-content">
                                     <p><strong>What is a Regular Language?</strong></p>
-                                                                        <div class = "sipser-def">
+                                    <div class = "sipser-def">
                                         <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.16</strong></p>
                                         <div class = "def-content">
                                             <p>A language is called a <strong><em>regular language </em></strong> &nbsp;
                                                 if some finite automaton recognizes it.</p>
                                         </div>
                                     </div>
-
+                                    <p> What languages aren't regular?</p>
                                 </div>
                             </div>
                             <!-- DFA -->
@@ -244,17 +244,17 @@
                         <br><span style="font-size:35px">(<em>V</em>, &Sigma;, <em>R</em>, <em>S</em> )</span>, where </p>
                         <br>
                         <span style = "text-align: left;">
-                            <p style="font-size:20px; "><em>Q</em>&nbsp; is a finite set of <em>states</em><br>
-                            &Sigma;&nbsp; is a finite <em>alphabet</em><br>
-                            <mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark><br>
-                            q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em><br>
-                            <em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em>
+                            <p style="font-size:20px; ">
+                                <em>V</em> &nbsp;is a finite set called the <strong><em>variables</em></strong>,<br>
+                                &Sigma;&nbsp;is a finite set, disjoint from <em>V</em>, called the <strong><em>terminals</em></strong>,<br>
+                                <em>R</em>&nbsp; is a finite set of <strong><em>rules</em></strong>, with each rule being a variable pointing to a string of variables and terminals,<br>
+                                <em>S</em>&nbsp;&#8714;<em>V</em> &nbsp;is the start variable.<br>
                             </p>
                         </span>
                         <br>
                         <div class = "content-img">
-                            <p><b>simple NFA e.g.</b></p>
-                            <img src = "assets/nfaeg.png"/>
+                            <p><b>simple DFA e.g.</b></p>
+                            <img src = "assets/cfgeg.png" style="width: 200px;"/>
                         </div>
                     </div>
                 </div>
