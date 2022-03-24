@@ -242,7 +242,7 @@ b{
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.4);
     background-color: white;
-    font-size: 26px;
+    font-size: 20px;
     margin: 0 auto;
     box-shadow: 1px 1px 5px #555 inset; 
     
@@ -284,7 +284,7 @@ b{
 }
 .def-content {
     text-align: left;
-    width: 80%;
+    width: 85%;
     
 }
 .def-content > p {

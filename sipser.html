@@ -41,13 +41,13 @@
                                 <h1 class = "sipser-title">DFA</h1>
                                 <div class = "sipser-obj-content">
                                     <p class = "left">A <strong><em>deterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
-                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>, where </p>
                                     <br>
                                     <ol type="1">
                                         <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
                                         <li>&Sigma;&nbsp; is a finite <em>alphabet</em></li>
                                         <li>&delta; : <em>Q</em> x &Sigma; &rarr; <em>Q</em> is the <em>transition function</em></li>
-                                        <li>q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
+                                        <li><em>q</em><sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
                                         <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
                                     </ol>
                                     <br>
@@ -66,13 +66,13 @@
                                 <h1 class = "sipser-title">NFA</h1>
                                 <div class = "sipser-obj-content">
                                     <p class = "left">A <strong><em>nondeterministic finite automaton</em></strong> is a <strong>5-tuple</strong>
-                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, q<sub>0</sub>, <em>F</em> )</span>, where </p>
+                                    <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span>, where </p>
                                     <br>
                                     <ol type="1">
                                         <li><em>Q</em>&nbsp; is a finite set of <em>states</em></li>
                                         <li>&Sigma;&nbsp; is a finite <em>alphabet</em></li>
                                         <li><mark>&delta; : <em>Q</em> x &Sigma;<sub>&epsilon;</sub> &rarr; <em>P</em> (<em>Q</em> ) is the <em>transition function</em></mark></li>
-                                        <li>q<sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
+                                        <li><em>q</em><sub>0</sub> &#8714; <em>Q</em> is the <em> start state</em></li>
                                         <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states</em></li>
                                     </ol>
 
@@ -142,7 +142,7 @@
                                     <br>
                                     <p><strong>Star -</strong></p>
                                     <p style = "text-align: center;">
-                                    Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b></p>,
+                                    Assuming we are taking the Kleene star of the language for machine <b>M<sub>1</sub></b>,</p>
                                         <br>
                                     <ul>
                                         <li>Kleene Star is a <strong><em>unary</em></strong> &nbsp;operation. </li>
@@ -227,7 +227,7 @@
                                 <p class = "def-title">andrew gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>1.01</strong></p>
                                 <div class = "def-content">
                                     <p>A language is called a <strong><em>context free language </em></strong> &nbsp;
-                                        if some context free grammar or pushdown automata recognizes it.</p>
+                                        if some context free grammar or pushdown automaton recognizes it.</p>
                                 </div>
 
                                 
@@ -254,13 +254,32 @@
                             <p><b>simple CFG e.g.</b></p>
                             <img src = "assets/cfgeg.png"/>
                         </div>
-                        <p style="font-size: 20px;">EXPR &nbsp;<mark><strong><em>yields</em></strong></mark> &nbsp;three rules: &nbsp;(EXPR) + (EXPR) &nbsp;| &nbsp;(EXPR) x (EXPR) &nbsp;| &nbsp;(EXPR).</p>
+                        <p style="font-size: 20px;">The variable EXPR &nbsp;<mark><strong><em>yields</em></strong></mark> &nbsp;three rules &rarr; &nbsp;(EXPR) + (EXPR) &nbsp;| &nbsp;(EXPR) x (EXPR) &nbsp;| &nbsp;(EXPR).</p>
                         <br>
                         <div class = "sipser-def">
                             <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>2.7</strong></p>
                             <div class = "def-content">
                                 <p>If a grammar <em>G</em>&nbsp; can derive a string <em>w</em> <em>ambiguously</em>,
                                      more than one way, Grammar <em>G</em> is <strong><em>ambiguous</em></strong>.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <p> What is the simplified form?</p>
+                        <div class = "sipser-def">
+                            <p class = "def-title">sipser gospels &nbsp;&nbsp;&nbsp;&nbsp;<strong>2.8</strong></p>
+                            <div class = "def-content">
+                                <p>
+                                    A context free grammar is in <strong><em>Chomsky normal form</em></strong> if every rule is of the form,<br>
+                                </p>
+                                <p style="text-align: center;">
+                                    <em>A</em> &rarr; <em>BC</em><br>
+                                    <em>A</em> &rarr; <em>a</em>
+                                </p>
+                                <p>
+                                    where <em>a</em> is any terminal and <em>A</em>, <em>B</em>, and <em>C</em> are any variables&mdash;except that <em>B</em> and <em>C</em>
+                                    may <strong><em><mark>NOT</mark></em></strong> be the start variable. In addition, we permit the rule <em>S</em> &rarr; &epsi;, where <em>S</em>
+                                    &nbsp;is the start variable.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -271,6 +290,37 @@
                 <div class = "sipser-obj">
                     <h1 class = "sipser-title">PDA</h1>
                     <div class = "sipser-obj-content">
+                        <p class = "left">A <strong><em>pushdown automaton</em></strong> is a <strong>6-tuple</strong>
+                        <br><span style="font-size:35px">(<em>Q</em>, &Sigma;, Γ, &delta;, <em>q</em><sub>0</sub>, <em>F</em> )</span> where, </p>
+                        <br>
+                            <ol type="1">
+                                <li><em>Q</em> is the set of states,</li>
+                                <li>&Sigma; is the input alphabet,</li>
+                                <li>Γ is the <em>stack</em> alphabet,</li>
+                                <li>&delta;: <em>Q</em> x &Sigma;<sub>&epsi;</sub> x Γ<sub>&epsi;</sub> &rarr; <em>P</em> ( <em>Q</em> x Γ<sub>&epsi;</sub> ) is the transition function,</li>
+                                <li><em>q</em><sub>0</sub> &#8714; <em>Q</em> is the <em> start state,</em></li>
+                                <li><em>F</em>&nbsp; <span style="font-size:15px">&sube;</span> <em>Q </em> is the <em>set of accept states.</em></li>
+                            </ol>
+                        <br>
+                        <p>
+                            The formal definition of a pushdown automaton is similar to that of a nondeterministic finite automaton, except for the <strong>stack</strong>.<br><br>
+                            A stack is valuable because for theoretical purposes we allow it to hold an <mark><em>unlimited amount of information</em></mark>.
+                        </p>
+                        <br>
+                        <div class = "content-img">
+                            <p><b>PDA e.g.</b></p>
+                            <img src = "assets/pdaeg.png"/>
+                        </div>
+                        <br>
+                         <p>The transition function for a PDA takes the form: </p>
+                         <p><mark><strong>read , pop &rarr; push</strong></mark></p>
+                         <br>
+                         <p>read being replaced with a character that from the input alphabet, &Sigma;<sub>&epsi;</sub>, that is read to the machine,</p>
+                         <p>pop and push being replaced with a character from the stack alphabet, Γ<sub>&epsi;</sub>, that can pop or push the character off or on to the stack respectively.</p>
+                         <br>
+                         <p>Notice how both of the alphabets in the transition function have an &epsi; subscript,<br><br>
+                        the reason for this is the nondeterminism of a PDA, since the PDA is able to make choices on its next move, we allow epsilon transitions where the machine may or may not
+                    read, pop, or push at all.</p>
                     </div>
                 </div>
                 <!-- PDA--> 
