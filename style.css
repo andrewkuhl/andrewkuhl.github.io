@@ -52,7 +52,7 @@ margin: 0 auto;
     font-size: 26px;
     background-color: rgb(211, 211, 211);
     border-radius: 5px;
-    box-shadow: 1px 1px 7px #555 inset; 
+    box-shadow: 2px 2px 7px #555 inset; 
     padding:10px;
 }
 .list-obj{
@@ -60,6 +60,7 @@ margin: 0 auto;
 }
 .btn {
     border: 1px solid rgba(0,0,0,.4);
+    
 }
 .btn:hover{
     transform:scale(1.05);
@@ -84,9 +85,21 @@ margin: 0 auto;
 }
 #hash {
     background: #A4E2F4;
+    filter: grayscale(.5);
+    color:rgb(122, 122, 122);
+}
+#hash:hover{
+    transform: none !important;
+    box-shadow: none !important;
 }
 #bst {
     background: #A4BAF4;
+    filter: grayscale(.5);
+    color:rgb(122, 122, 122);
+}
+#bst:hover{
+    transform: none !important;
+    box-shadow: none !important;
 }
 #sipser {
     background: #B6A4F4;
