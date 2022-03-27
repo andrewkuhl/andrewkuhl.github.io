@@ -29,10 +29,11 @@ display: grid;
 justify-items: center;
 background-color: rgb(228, 228, 228);
 border: 1px solid rgba(0,0,0,.4);
-border-top-width:15px;
+border-top-width:25px;
 border-radius: 10px;
 width: 200px;
-margin: 0 auto;
+margin: 100px auto;
+padding:0;
 }
 #list-container:hover{
     cursor: pointer;
@@ -40,23 +41,44 @@ margin: 0 auto;
 .list-title{
     font-size: 24px;
     position: absolute;
-    top: -60px;
+    top: -70px;
 }
+#clickhere{
+    position:absolute;
+    color: #ffc1c1;
+    top: -30px;
+    pointer-events: none;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 2px rgb(255, 180, 180), 0 0 4px rgb(255, 124, 124),0 0 6px rgb(255, 106, 106);
+    }
+    to {
+      text-shadow: 0 0 4px rgb(249, 145, 145), 0 0 8px rgb(253, 74, 74), 0 0 12px rgb(255, 0, 0);
+    }
+  }
 .linklist {
     display: grid;
     justify-items: center;
     padding:5px;
-    margin: .5em auto;
+    margin: 0 auto .5em;
     gap: 10px;
     text-align: center;
     font-size: 26px;
     background-color: rgb(211, 211, 211);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     box-shadow: 2px 2px 7px #555 inset; 
     padding:10px;
 }
 .list-obj{
-    margin: 5px;
+    margin-bottom: 5px;
+}
+.disappear{
+    position: absolute;
+    top: 7em;
+    left: 51em;
 }
 .btn {
     border: 1px solid rgba(0,0,0,.4);

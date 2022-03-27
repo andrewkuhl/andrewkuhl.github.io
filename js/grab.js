@@ -1,5 +1,6 @@
 var dragItem = document.querySelector("#list-container");
 var container = document.querySelector("#container");
+let fadeText = document.getElementById('clickhere');
 
 var active = false;
 var currentX;
@@ -28,6 +29,7 @@ function dragStart(e) {
 
     if (e.target === dragItem) {
     active = true;
+    fadeText.classList.add('fade');
     }
 }
 
